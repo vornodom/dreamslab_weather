@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* header active menu */
+header nav ul a.active {
+  color: #009ad8;
+  border-color: #009ad8;
+}
+header #mobile ul li a.active{
+  color: #009ad8;
+}
+
+.today-forecast{
+  background-color: #323544;
+}
+.head-forecast{
+  background-color: #2d303d;
+}
+.even .forecast:nth-child(even) {
+  background-color: #323544;
+
+}
+.even .forecast:nth-child(even) div:first-child{
+  background-color: #2d303d;
+
+}
+.even .forecast:nth-child(odd){
+  background-color:#262936;
+  /* background-color: #1e202b ; */
+}
+.even .forecast:nth-child(odd) div:first-child{
+  background-color: #222530;
+}
+
+
+@layer components{
+  .button{
+    @apply text-[0.875rem] border-third  border-2 px-[1.563rem] py-[0.313rem] rounded-full transition duration-300 ease-in;
+  }
+  .button-hover{
+    @apply hover:text-primary hover:border-primary;
+  }
+  .mobile-button{
+    @apply flex justify-center text-center p-[1.25rem] border-b-[1px]  border-white border-opacity-10;
+  }
+  
+}
